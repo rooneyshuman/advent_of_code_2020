@@ -24,3 +24,12 @@ class Utils:
         fp = open(filepath, "r")
         input = fp.read().splitlines()
         return input
+    
+    def input_as_lists(filepath):
+        input = []
+        with open(filepath) as fp:
+            line = fp.readline().strip()
+            while line:
+                input.append(list(line))
+                line = fp.readline().strip()
+        return input
